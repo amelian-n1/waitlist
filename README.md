@@ -1,7 +1,9 @@
 # Waitlist
 
 Goals
+
 •	My goal is to create an open source tool that online sellers can use to add a waitlist feature to their website. Due to the outbreak of COVID-19, online stores are selling out of essential products more frequently and customers need a way to guarantee they will receive them at some point.
+
 •	The tool should easily integrate into a seller’s current business processes, allowing them to better serve their customers while increasing profits.
 
 Background and Strategic Fit
