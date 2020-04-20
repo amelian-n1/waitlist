@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='materialize.min.css') }}" media="screen,projection">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Shipment</title>
+</head>
+
+<header>
+    <nav class="grey" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/dashboard" class="brand-logo">Next N Line</a></div>
+    </nav>
+</header>
+<div class="container">
+<body>
+    <br>
+    <a id="back" href="/products/{{shipment.product_id}}/edit">< Back</a>
+    <h3>Edit shipment</h3>
+    {% with messages=get_flashed_messages() %}
+        {% for message in messages %}
+            <p class="red-text"><i class="material-icons left">warning</i>{{message}}</p>
+        {% endfor %}
+    {% endwith %}
+    <a href="/shipments/{{shipment.id}}/delete" id="deleteshipment" class="waves-effect waves-light btn-small right"><i class="material-icons right">delete</i>Delete</a>
+    <form class="col s12" action="/shipments/update" method='post'>
+        <div class="col s12">
+            <p class="grey-text">Edit arrival date<input type="date" name="estimate_delivery_date" value ="{{shipment.estimate_delivery_date}}"></p>
+        </div>
+        <div class="col s12">
+            <p class="grey-text">Edit product quantity<input type="number" name="product_quantity" value="{{shipment.product_quantity}}"></p>
+        </div>
+        <div class="col s12">
+            <p class="grey-text">Edit purchase limit<input type="number" name="purchase_limit" value="{{shipment.purchase_limit}}"></p>
+        </div>
+        <div>
+            <input type="hidden" name="original_shipment_id" value="{{shipment.id}}">
+        </div>
+        <div class="col s12">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Update
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+    <br>
+</div>
+</body>
+</html>
+

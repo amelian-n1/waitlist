@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='join_waitlist_style.css') }}">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="{{ url_for('static', filename='main.js') }}"></script>
+    <title>Join Waitlist</title>
+</head>
+<div class="content">
+<body>
+    <div class="form-style">
+        <h2>Out of stock? Join the waitlist</h2>
+        <h3>Estimated back in stock: {{shipment.estimate_delivery_date.strftime("%b %d %Y")}}</h3>
+        {% with messages=get_flashed_messages() %}
+            {% for message in messages %}
+                <p id="flash">{{message}}</p>
+            {% endfor %}
+        {% endwith %}
+        <form id="waitlist" action="/waitlist/{{shipment.id}}/join" method=POST>
+            <div>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name">
+            </div>
+            <div>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    {% for value in shipment.purchase_limit_values() %}
+                    <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+                </select>
+            </div>
+            <div>
+                <input type="hidden" name="product_id" value="{{product.product_id}}">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+      </div>
+</body>
+</div>
+</html>

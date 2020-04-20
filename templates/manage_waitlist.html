@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='materialize.min.css') }}" media="screen,projection">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Waitlist</title>
+</head>
+<header>
+    <nav class="grey" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/dashboard" class="brand-logo">Next N Line</a></div>
+    </nav>
+</header>
+<div class="container">
+<body>
+    <br>
+    <a id="back" href="/dashboard">< Back</a>
+    <h3>Waitlist for {{product.product_name}} ({{product.product_id}})</h3>
+    <p class="center">Total customers: {{ product.total_waitlisted_customers() }} | Total quantity ordered: {{ product.total_ordered_quantity() }}</p>
+    <br>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Email</th>
+                    <th>Quantity Purchased</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in product.product_orders %}
+                <tr>
+                    <td>{{order.id}}</td>
+                    <td>{{order.customer.first_name}} {{order.customer.last_name }}</td>
+                    <td>{{order.customer.email}}</td>
+                    <td>{{order.quantity}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <br>
+</div>
+</body>
+</html>

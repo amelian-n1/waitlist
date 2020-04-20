@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='materialize.min.css') }}" media="screen,projection">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shipment</title>
+</head>
+<header>
+    <nav class="grey" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/dashboard" class="brand-logo">Next N Line</a></div>
+    </nav>
+</header>
+<div class="container">
+<body>
+    <br>
+    <a id="back" href="/dashboard">< Back</a>
+    <h3>Add a new shipment</h3>
+    <p>Enter an additional shipment for {{product.product_name}} ({{product.product_id}})</p>
+    <br>
+    <form class="col s12" action="/shipments/new" method=POST>
+        <div class="col s12">
+            <p class="grey-text">When is your incoming product shipment scheduled to arrive?<input type="date" name="estimate_delivery_date"></p>  
+        </div>
+        <div class="col s12">
+            <p class="grey-text">How many individual products are included in the shipment?<input type="number" name="product_quantity"></p>  
+        </div>
+        <div class="col s12">
+            <p class="center red-text">In light of recent events involving the coronavirus (COVID‐19) outbreak, it is recommended to set a purchase limit to prevent customers from overordering.</p>
+        </div>
+        <div class="col s12">
+            <p class="grey-text">Enter a purchase limit<input type="number" name="purchase_limit"></p>
+        </div>
+        <div>
+            <input type="hidden" name="product_id" value="{{product.product_id}}">
+        </div>
+        <div class="col s12">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+        <br>
+    </form>
+</body>
+</div>
+</html>

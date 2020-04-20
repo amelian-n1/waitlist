@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='materialize.min.css') }}" media="screen,projection">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<header>
+    <nav class="grey" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/dashboard" class="brand-logo">Next N Line</a></div>
+    </nav>
+</header>
+<div class="container">
+<body>
+    <br>
+    <a id="back" href="/dashboard">< Back</a>
+    <h3>Edit {{product.product_name}}</h3>
+    {% with messages=get_flashed_messages() %}
+        {% for message in messages %}
+            <p class="red-text"><i class="material-icons left">warning</i>{{message}}</p>
+        {% endfor %}
+    {% endwith %}
+    <a href="/products/{{product.product_id}}/delete" id="deleteproduct" class="waves-effect waves-light btn-small right"><i class="material-icons right">delete</i>Delete</a>
+    <form class="col s12" action="/products/update" method='post'>
+        <div class="col s12">
+            <p class="grey-text">Edit product ID<input type="text" name="product_id" value="{{product.product_id}}"></p>
+        </div>
+        <div class="col s12">
+            <p class="grey-text">Edit product name<input type="text" name="product_name" value="{{product.product_name}}"></p>
+        </div>
+        <div class="col s12">
+            <p class="grey-text">Click to edit shipments</p>
+            <ul>
+            {% for shipment in shipments %}
+                <li><a href="/shipments/{{shipment.id}}/edit">{{shipment.estimate_delivery_date.strftime("%b %d %Y")}}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <input type="hidden" name="original_product_id" value="{{product.product_id}}">
+        </div>
+        <div class="col s12">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Update
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+    <br>
+</div>
+</body>
+</html>
