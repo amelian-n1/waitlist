@@ -248,12 +248,6 @@ def update_shipment_info():
 
         new_delivery_date = datetime.strptime(new_date, '%Y-%m-%d')
 
-        print(new_delivery_date)
-
-        print(request.form['estimate_delivery_date'])
-
-        print(" im a big monkey!!!!!")
-
         if updated_quantity < difference_bwtn:
             flash("There are {} products ordered from this shipment. Please cancel customer orders before editing the quantity.".format(ordered_quantity))
     
