@@ -18,13 +18,17 @@ Most ecommerce websites do not have a waitlist option for customers. A waitlist 
 
 # Workflow
 
-<img src="/images/dashboard.png" width="350" />
+<p align="middle">
+  <img src="/images/dashboard.png" width="600" />
+</p>
 
 The dashboard is the central hub of the application. It provides users with a snapshot view of their products, amount in transit from incoming shipments, and the date those shipments arrive.
 
 To add additional products, the user would select the Add Product button in the upper right corner.
 
-<img src="/images/add_a_new_product.png" width="350" />
+<p align="middle">
+  <img src="/images/add_a_new_product.png" width="600" />
+</p>
 
 The user then fills out a si
 
