@@ -1,5 +1,7 @@
 # Waitlist
 
+Final project for Coding Dojo Software Development Bootcamp. The assignment was to build a web application in a 2 week sprint.
+
 # Goals
 
 •	My goal is to create an open source tool for online sellers to add a waitlist feature to their website for customers to order from incoming shipments. This will allow customers to secure their order ahead of time and ensure access to high demand items.
