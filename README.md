@@ -34,9 +34,18 @@ The user then fills out the new product form. In this form, the user can set a p
 
 <img align="right" src="/images/customer_waitlist.png" width="300" />
 
-Once the product is submitted, users will be rediretced to the dashboard. Here they have the option to add additional shipments, edit the product information, and edit the shipment information if necessary.
+Once the new product form is submitted, users will be rediretced back to the dashboard. Here they have the option to add additional shipments, edit the product information, and edit the shipment information if necessary.
 
 Additionally, a customer-facing waitlist form is automatically created. The form will show the arrival date of the next incoming shipment as the back in stock date. This will allow customers to make an educated decision regarding whether they are willing to wait for this product to become back in stock.
+
+Customers will need to enter their name, email address, and quantity they wish to purchase to join the waitlist. The quantity dropdown will show a range from 1 to whatever the purchase limit was entered as by the user.
+
+Once a customer joins a waitlist for a particular product, they will not be able to join again using the same email address.
+
+<p align="middle">
+  <img src="/images/add_a_new_product.png" width="600" />
+</p>
+
 
 Users would first register their email address and create a password that would be encrypted and stored in the database. This would allow for all of their events to be stored in one secure location.
 
