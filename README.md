@@ -24,7 +24,7 @@ Most ecommerce websites do not have a waitlist option for customers. A waitlist 
 
 The dashboard is the central hub of the application. It provides users with a snapshot view of their products, the amount in transit from incoming shipments, and the date those shipments arrive.
 
-To add additional products, the user would select the Add Product button in the upper right corner.
+To add additional products, the user would select the Add Product button in the upper right-hand corner.
 
 <p align="middle">
   <img src="/images/add_a_new_product.png" width="600" />
@@ -36,33 +36,16 @@ The user then fills out the new product form. In this form, the user can set a p
 
 Once the new product form is submitted, users will be rediretced back to the dashboard. Here they have the option to add additional shipments, edit the product information, and edit the shipment information if necessary.
 
-Additionally, a customer-facing waitlist form is automatically created. The form will show the arrival date of the next incoming shipment as the back in stock date. This will allow customers to make an educated decision regarding whether they are willing to wait for this product to become back in stock.
+Additionally, a customer-facing waitlist form for that product is automatically created. The form will show the arrival date of the next incoming shipment as the back in stock date. This will allow customers to make an educated decision regarding whether they are willing to wait for this product to become back in stock.
 
-Customers will need to enter their name, email address, and quantity they wish to purchase to join the waitlist. The quantity dropdown will show a range from 1 to whatever the purchase limit was entered as by the user.
+Customers will need to enter their name, email address, and quantity they wish to purchase to join the waitlist. The quantity dropdown will show a range from 1 to the purchase limit that was entered as by the user.
 
-Once a customer joins a waitlist for a particular product, they will not be able to join again using the same email address.
+Additional restrictions are put in place to prevent customers from over-ordering. Once a customer joins a waitlist for a particular product, they will not be able to join again using the same email address.
 
-<p align="middle">
-  <img src="/images/add_a_new_product.png" width="600" />
-</p>
-
-
-Users would first register their email address and create a password that would be encrypted and stored in the database. This would allow for all of their events to be stored in one secure location.
-
-After registering, users would login and be directed to the Create an event form. Following the Facebook model, users would enter all necessary details of their upcoming event including time, date, location and description.
-
-After clicking submit, the user would be directed to the Dashboard. As the central home of the app, the Dashboard includes all of their events, evites, and quick snapshots of the RSVPs.
-
-Clicking on Event details would show all of the details submitted in the event form and provide a list of all of the RSVPed guests, including their names and email addresses.
-
-Clicking on My evite would open the event invitation with all of their specified details and RSVP form. To make it easy for attendees to find the event location, we added the Google Map API which shows a map of the physical location.
-
-<br>
+Users are able to see a list of all of the customers that have joined the waitlist, their email addresses, and the amount the customer ordered by navigating to the Manage Waitlist page from the dashboard. Customer and order product totals are displayed at the top of the page for a quick snapshot view.
 
 <p align="middle">
-  <img src="/images/dashboard.png" width="600" />
-  <img src="/images/event_details.png" width="600" />
-  <img src="/images/RSVP.png" width="600" />
+  <img src="/images/manage_waitlist.png" width="600" />
 </p>
 
 # Built With
