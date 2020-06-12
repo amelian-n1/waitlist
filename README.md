@@ -49,13 +49,13 @@ Users are able to see a list of all of the customers that have joined the waitli
 </p>
 
 # Built With
-Python, Django, HTML, Materialize
+Python, Flask, HTML, CSS, Materialize
 
 # Installation
-Activate your Django virtual environment.
+Activate your Flask virtual environment.
 
 Navigate to the downloaded folder in your terminal. Run the following command.
 
-‘’’ $ python manage.py runserver ‘’’
+‘’’ $ python3 app.py ‘’’
 
-Go to localhost:8000 in your web browser.
+Go to localhost:5000/dashboard in your web browser.
