@@ -22,7 +22,7 @@ Most ecommerce websites do not have a waitlist option for customers. A waitlist 
   <img src="/images/dashboard.png" width="600" />
 </p>
 
-The dashboard is the central hub of the application. It provides users with a snapshot view of their products, amount in transit from incoming shipments, and the date those shipments arrive.
+The dashboard is the central hub of the application. It provides users with a snapshot view of their products, the amount in transit from incoming shipments, and the date those shipments arrive.
 
 To add additional products, the user would select the Add Product button in the upper right corner.
 
@@ -30,7 +30,13 @@ To add additional products, the user would select the Add Product button in the 
   <img src="/images/add_a_new_product.png" width="600" />
 </p>
 
-The user then fills out a si
+The user then fills out the new product form. In this form, the user can set a purchase limit that prevents customers from ordering more than the designated amount.
+
+<img align="right" src="/images/add_a_new_product.png" width="300" />
+
+Once the product is submitted, users will be rediretced to the dashboard. Here they have the option to add additional shipments, edit the product information, and edit the shipment information if necessary.
+
+Additionally, a customer-facing waitlist form is automatically created. The form will show the arrival date of the next incoming shipment as the back in stock date. This will allow customers to make an educated decision regarding whether they are willing to wait for this product to become back in stock.
 
 Users would first register their email address and create a password that would be encrypted and stored in the database. This would allow for all of their events to be stored in one secure location.
 
