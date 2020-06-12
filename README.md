@@ -32,7 +32,7 @@ To add additional products, the user would select the Add Product button in the 
 
 The user then fills out the new product form. In this form, the user can set a purchase limit that prevents customers from ordering more than the designated amount.
 
-<img align="right" src="/images/customer_waitlist.png" width="300" />
+<img align="right" src="/images/customer_waitlist.png" width="250" />
 
 Once the new product form is submitted, users will be rediretced back to the dashboard. Here they have the option to add additional shipments, edit the product information, and edit the shipment information if necessary.
 
